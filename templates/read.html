@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read Users</title>
+</head>
+<body>
+    <h1>Produtos</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Produto nome</th>
+            <th>valor</th>
+            <th>Ação</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user[0] }}</td>
+            <td>{{ user[1] }}</td>
+            <td>{{ user[2] }}</td>
+            <td><a href="/update/{{ user[0] }}">Update</a> | <a href="/delete/{{ user[0] }}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
